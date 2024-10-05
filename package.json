@@ -1,7 +1,9 @@
+echo "Creating package.json file..."
+cat <<EOL > package.json
 {
-  "name": "user-management-app",
+  "name": "$PROJECT_NAME",
   "version": "1.0.0",
-  "description": "User Management: Registration and Login",
+  "description": "User Management: Registration and Login with reCAPTCHA",
   "main": "app.js",
   "scripts": {
     "start": "node app.js"
@@ -12,6 +14,8 @@
     "express": "^4.18.2",
     "jsonwebtoken": "^9.0.0",
     "mongoose": "^7.0.0",
-    "nodemailer": "^6.7.2"
+    "nodemailer": "^6.7.2",
+    "axios": "^1.4.0"  # Added axios for HTTP requests
   }
 }
+EOL
